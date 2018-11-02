@@ -13,7 +13,7 @@ In order to make an absolute guarantee, simple arithmetics isn't enough, you nee
 
 Very likely the only way to do this with a common algorithm for all combinations of current standings and remaining matches (both when there are just a few remaining matches and when there are many remaining matches) to have strategies for reducing the number of matchresult combinations that you need to simulate.
 
-#Simulation ideas
+# Simulation ideas
 * Make a process that takes as parameters a league standing, results of remaining matches, and has some data as output (league)
 * Make a process that iteratively or recursively makes exhaustive list of result outcomes (but it's n matches to the power of m outcomes, so need to be able to not create everything up front)
 * Make simulations that give both upper/lower guaranteed positions, and likely positions
@@ -23,7 +23,7 @@ Very likely the only way to do this with a common algorithm for all combinations
 * Make a simulation that takes all possible match results, but with weighting based on probabilities
 * Make a simulation that takes a monte carlo approach, with weighted results
 
-#Guarantee ideas
+# Guarantee ideas
 * An easy way to make a upper bound is to consider for a player that he wins all remaining matches with best score and all opponents individually lose all their matches with the worst score. A player cannot place higher than that. However, there can potentially be stricter upper bounds (since all opponents can't lose all remaining matches if they play at least one match against each other).
 * An easy way to make a lower bound is to consider for a player that he loses all remaining matches with worst score and all opponents individually win all their matches with the worst score. A player cannot place lower than that. However, there can potentially be stricter lower bounds (since all opponents can't win all remaining matches if they play at least one match against each other).
 * With many remaining matches, this will likely be **the** correct upper/lower guarantee. But there's no way for sure to figure this out unless everything is simulated.
